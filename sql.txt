@@ -1,0 +1,21 @@
+//natural join  : joining between two different tables
+
+select *emp_name from employee,department where employee.eno = department.eno ;
+
+or 
+
+select *emp_name from employee natural join department;
+
+
+//self join : joining between same tables
+
+select  t1.sid from study as t1, study as t2  where t1.sid = t2.sid and t1.cid!=t2.cid;
+//
+
+equi join 
+
+select e_name from emp , dept where emp.eno = dept.eno and emp.address =dept.address
+
+left outer join 
+
+select emp_no, e_name ,d_name,loc from emp left outer join dept on emp.deptno=dept.deptno;
